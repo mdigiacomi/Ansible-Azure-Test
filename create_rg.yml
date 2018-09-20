@@ -5,6 +5,7 @@
       azure_rm_resourcegroup:
         name: '{{ azure_resource_group }}'
         location: eastus
-      register: rg
-    - debug:
-        var: rg
+        tags:
+          testing: testing
+          delete: never
+        
