@@ -8,7 +8,6 @@
         vm_size: '{{vm_size}}'
         admin_username: chouseknecht
         ssh_password: 'MikeTest123'
-        ssh_public_keys: false
         image:
           offer: CentOS
           publisher: OpenLogic
