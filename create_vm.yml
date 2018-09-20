@@ -2,15 +2,15 @@
 - hosts: localhost
   tasks:
     - name: Create vm group
-        azure_rm_virtualmachine:
-          resource_group: '{{rez_group}}'
-          name: '{{vm_name}}'
-          vm_size: '{{vm_size}}'
-          admin_username: chouseknecht
-          ssh_password: 'MikeTest123'
-          ssh_public_keys: false
-          image:
-            offer: CentOS
-            publisher: OpenLogic
-            sku: '7.1'
-            version: latest
+      azure_rm_virtualmachine:
+        resource_group: '{{rez_group}}'
+        name: '{{vm_name}}'
+        vm_size: '{{vm_size}}'
+        admin_username: chouseknecht
+        ssh_password: 'MikeTest123'
+        ssh_public_keys: false
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.1'
+          version: latest
