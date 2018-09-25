@@ -55,7 +55,7 @@
         storage_account: mdigiacomistorage
         storage_container: mdigiacomitestvm001
         storage_blob: testvm001.vhd
-        admin_username: admin
+        admin_username: mdigiacomi
         admin_password: Password!
         network_interfaces: mdigiacomitestnic001
         image:
