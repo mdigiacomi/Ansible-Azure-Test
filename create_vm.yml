@@ -18,7 +18,7 @@
         resource_group: Mike-azure-test
         name: mdigiacomisubnet001
         address_prefix: "10.10.0.0/24"
-        virtual_network: mdigiacomi-testvn001
+        virtual_network: mdigiacomitestvn001
 
     - name: Create public ip
       azure_rm_publicipaddress:
@@ -43,7 +43,7 @@
         resource_group: Mike-azure-test
         name: mdigiacomitestnic001
         virtual_network: mdigiacomitestvn001
-        subnet: mdigiacomi-subnet001
+        subnet: mdigiacomisubnet001
         public_ip_name: mdigiacomipublicip001
         security_group: mdigiacomisecgroup001
 
