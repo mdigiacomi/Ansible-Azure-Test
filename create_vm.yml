@@ -56,7 +56,7 @@
         storage_container: mdigiacomitestvm001
         storage_blob: testvm001.vhd
         admin_username: mdigiacomi
-        admin_password: Password!
+        admin_password: CDFS123!
         network_interfaces: mdigiacomitestnic001
         image:
           offer: CentOS
