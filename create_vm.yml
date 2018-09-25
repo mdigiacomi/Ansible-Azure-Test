@@ -4,19 +4,19 @@
     - name: Create storage account
       azure_rm_storageaccount:
         resource_group: Mike-azure-test
-        name: mdigiacomi-storage
+        name: mdigiacomistorage
         account_type: Standard_LRS
 
     - name: Create virtual network
       azure_rm_virtualnetwork:
         resource_group: Mike-azure-test
-        name: mdigiacomi-testvn001
+        name: mdigiacomitestvn001
         address_prefixes: "10.10.0.0/16"
 
     - name: Add subnet
       azure_rm_subnet:
         resource_group: Mike-azure-test
-        name: mdigiacomi-subnet001
+        name: mdigiacomisubnet001
         address_prefix: "10.10.0.0/24"
         virtual_network: mdigiacomi-testvn001
 
@@ -24,12 +24,12 @@
       azure_rm_publicipaddress:
         resource_group: Mike-azure-test
         allocation_method: Static
-        name: mdigiacomi-publicip001
+        name: mdigiacomipublicip001
 
     - name: Create security group that allows SSH
       azure_rm_securitygroup:
         resource_group: Mike-azure-test
-        name: mdigiacomi-secgroup001
+        name: mdigiacomisecgroup001
         rules:
           - name: SSH
             protocol: Tcp
@@ -41,23 +41,23 @@
     - name: Create NIC
       azure_rm_networkinterface:
         resource_group: Mike-azure-test
-        name: mdigiacomi-testnic001
-        virtual_network: mdigiacomi-testvn001
+        name: mdigiacomitestnic001
+        virtual_network: mdigiacomitestvn001
         subnet: mdigiacomi-subnet001
-        public_ip_name: mdigiacomi-publicip001
-        security_group: mdigiacomi-secgroup001
+        public_ip_name: mdigiacomipublicip001
+        security_group: mdigiacomisecgroup001
 
     - name: Create virtual machine
       azure_rm_virtualmachine:
         resource_group: Mike-azure-test
-        name: mdigiacomi-testvm001
+        name: mdigiacomitestvm001
         vm_size: Standard_D1
-        storage_account: mdigiacomi-storage
-        storage_container: mdigiacomi-testvm001
+        storage_account: mdigiacomistorage
+        storage_container: mdigiacomitestvm001
         storage_blob: testvm001.vhd
         admin_username: admin
         admin_password: Password!
-        network_interfaces: mdigiacomi-testnic001
+        network_interfaces: mdigiacomitestnic001
         image:
           offer: CentOS
           publisher: OpenLogic
