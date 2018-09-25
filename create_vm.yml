@@ -4,7 +4,7 @@
     - name: Create storage account
       azure_rm_storageaccount:
         resource_group: Mike-azure-test
-        name: testaccount001
+        name: testaccount002
         account_type: Standard_LRS
 
     - name: Create virtual network
@@ -52,7 +52,7 @@
         resource_group: Mike-azure-test
         name: testvm001
         vm_size: Standard_D1
-        storage_account: testaccount001
+        storage_account: testaccount002
         storage_container: testvm001
         storage_blob: testvm001.vhd
         admin_username: admin
