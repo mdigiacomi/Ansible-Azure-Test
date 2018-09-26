@@ -51,7 +51,7 @@
       azure_rm_virtualmachine:
         resource_group: Mike-azure-test
         name: mdigiacomitestvm001
-        vm_size: Standard_D1
+        vm_size: Standard_B1s
         storage_account: mdigiacomistorage
         storage_container: mdigiacomitestvm001
         storage_blob: testvm001.vhd
